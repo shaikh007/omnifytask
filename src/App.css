@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* weather styles */
+
+.weather {
+    width: 100%;
+    padding: 300px 200px;
+    /* background-color: aqua; */
+    background-image: url('./cloud.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-container {
+    padding-bottom: 20px;
+}
+
+.datas {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.input {
+    padding-right: 20px;
+}
+
+.input input {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 600;
+    border: none;
+    outline: none;
+}
+
+.btn button {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+.btn button:hover {
+    background-color: cadetblue;
+    color: aliceblue;
+}
+
+
+/* Display styles */
+
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.btn-modal {
+    padding: 10px 20px;
+    display: block;
+    margin: 100px auto 0;
+    font-size: 18px;
+}
+
+.modal,
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49, 49, 49, 0.8);
+}
+
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 10px;
+    max-width: 600px;
+    min-width: 300px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+}
+
+h2 {
+    padding: 10px;
+}
+
+.name {
+    font-size: large;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.temp {
+    font-size: large;
+    padding: 20px;
+    font-weight: 400;
+}
+
+.humidity {
+    font-size: large;
+    padding: 20px;
+    font-weight: 400;
+}
+
+.condition {
+    font-size: large;
+    padding: 20px;
+    font-weight: 400;
+}
+
+
+/* Responsive design */
+
+@media screen and (min-width: 1024px) {
+    .weather {
+        width: 100%;
+        color: black;
+    }
+    .heading-container {
+        padding-bottom: 20px;
+    }
+    .datas {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .input {
+        padding-right: 20px;
+    }
+    .input input {
+        padding: 10px;
+        border-radius: 5px;
+        font-size: large;
+        font-weight: 600;
+        border: none;
+        outline: none;
+    }
+    .btn button {
+        padding: 10px;
+        border-radius: 5px;
+        font-size: large;
+        font-weight: 600;
+        border: none;
+        outline: none;
+        background-color: aquamarine;
+        cursor: pointer;
+    }
+    .btn button:hover {
+        background-color: cadetblue;
+        color: aliceblue;
+    }
+    /* Display styles */
+    body.active-modal {
+        overflow-y: hidden;
+    }
+    .btn-modal {
+        padding: 10px 20px;
+        display: block;
+        margin: 100px auto 0;
+        font-size: 18px;
+    }
+    .modal,
+    .overlay {
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+    }
+    .overlay {
+        background: rgba(49, 49, 49, 0.8);
+    }
+    .modal-content {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 1.4;
+        background: #f1f1f1;
+        padding: 14px 28px;
+        border-radius: 10px;
+        max-width: 600px;
+        min-width: 300px;
+    }
+    .close-modal {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 5px 7px;
+    }
+    h2 {
+        padding: 10px;
+    }
+    .name {
+        font-size: large;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .temp {
+        font-size: large;
+        padding: 20px;
+        font-weight: 400;
+    }
+    .humidity {
+        font-size: large;
+        padding: 20px;
+        font-weight: 400;
+    }
+    .condition {
+        font-size: large;
+        padding: 20px;
+        font-weight: 400;
+    }
+}
+
+
+/* For Tablet View */
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .weather {
+        width: 100%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/* For Mobile Portrait View */
+
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+    .weather {
+        width: 100%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/* For Mobile Landscape View */
+
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+    .weather {
+        width: 100%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/* For Mobile Phones Portrait or Landscape View */
+
+@media screen and (max-device-width: 640px) {
+    .weather {
+        width: 100%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/* For iPhone 4 Portrait or Landscape View */
+
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .weather {
+        width: 100%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/* For iPhone 5 Portrait or Landscape View */
+
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    .weather {
+        width: 100%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+    .weather {
+        width: 100%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+;
